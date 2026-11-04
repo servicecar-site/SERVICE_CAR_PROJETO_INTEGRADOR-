@@ -1,0 +1,203 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292929;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container principal */
+.container {
+    width: calc(100% - 32px);
+    min-height: calc(100vh - 32px);
+    margin: 8px 16px;
+    background-color: white;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    width: 100%;
+    height: 76px;
+    background: linear-gradient(to bottom, #103b83, #00002e);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.cabecalho h1 {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+
+    width: 58px;
+    height: 56px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 9px;
+}
+
+/* Área principal */
+main {
+    width: 100%;
+    min-height: calc(100vh - 108px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Formulário */
+.formulario {
+    width: 514px;
+    min-height: 363px;
+
+    margin-top: 54px;
+    padding: 60px 18px 24px;
+
+    background-color: #858585;
+    border-radius: 43px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Campos */
+.campo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.campo label {
+    width: 105px;
+    text-align: right;
+
+    font-size: 20px;
+    color: black;
+}
+
+.campo input {
+    width: 317px;
+    height: 42px;
+
+    border: none;
+    outline: none;
+    border-radius: 30px;
+
+    background-color: #dedede;
+
+    padding: 0 17px;
+    font-size: 17px;
+    color: black;
+}
+
+.campo input:focus {
+    background-color: white;
+    box-shadow: 0 0 4px #0875c1;
+}
+
+/* Botão */
+.formulario button {
+    width: 191px;
+    height: 42px;
+
+    margin-top: 1px;
+
+    border: none;
+    background-color: #0875b9;
+
+    color: black;
+    font-size: 20px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #005c96;
+    color: white;
+}
+
+/* Mensagem */
+#mensagem {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 16px);
+        margin: 8px;
+    }
+
+    .cabecalho {
+        height: 70px;
+    }
+
+    .cabecalho h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 48px;
+        height: 48px;
+        top: 11px;
+    }
+
+    .formulario {
+        width: 92%;
+        min-height: auto;
+        margin-top: 45px;
+        padding: 40px 15px;
+        border-radius: 30px;
+        gap: 20px;
+    }
+
+    .campo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .campo label {
+        width: 100%;
+        text-align: left;
+        font-size: 17px;
+    }
+
+    .campo input {
+        width: 100%;
+        height: 42px;
+    }
+
+    .formulario button {
+        margin-top: 5px;
+    }
+}
