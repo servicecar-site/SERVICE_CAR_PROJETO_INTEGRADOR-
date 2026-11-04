@@ -1,0 +1,24 @@
+/* Todo o site */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+    background-color: aquamarine;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+}
+.header_nav img {
+    padding: 15px;
+    border-radius: ;
+}
+
+.header_nav h1 {
+   
+}
