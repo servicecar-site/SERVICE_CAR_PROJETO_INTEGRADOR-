@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Service Car</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cssDavi.css">
+
+</head>
+<body>
+<header>
+   <a href="#index"><img class="logo" src="img/logo_sc.png" alt="logo do site"></a>
+  <h1 id="title">Confirmar pagamento</h1>
+</header>
+<main>
+
+<section class="tela ativa" id="pagamento">
+  <div class="caixa resumo" aria-label="Resumo do serviço">
+    <p><span>Serviço agendado:</span> Polimento estético</p>
+    <p><span>Veículo:</span> Honda Civic 2019</p>
+    <p><span>Data e hora:</span> 04/11/2026 às 15:30</p>
+    <p><span>Valor a pagar:</span> <b>R$ 50,00</b></p>
+  </div>
+  <h2 style="margin-top:28px">Selecione a forma de pagamento</h2>
+
+  <form class="caixa forma-pagamento" data-m="Crédito">
+    <h3>Crédito <a href="#pagamento">Alterar cartão</a></h3>
+    <div class="campos">
+      <label>Cartão <input inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" data-card></label>
+      <label>CVC <input inputmode="numeric" maxlength="3" placeholder="000" data-cvc></label>
+      <label>Titular <input placeholder="Nome do titular do cartão" required></label>
+      <label>Parcelas <select>
+        <option>1x de R$ 50,00</option>
+        <option>2x de R$ 25,00</option>
+        <option>3x de R$ 16,67</option>
+      </select></label>
+    </div>
+    
+    <button class="botao" type="submit">Confirmar pagamento</button>
+    <p class="erro" role="alert"></p>
+  </form>
+
+  <form class="caixa forma-pagamento" data-m="Débito" style="margin-top:16px">
+    <h3>Débito <a href="#pagamento">Alterar cartão</a></h3>
+    <div class="campos">
+      <label>Cartão <input inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" data-card></label>
+      <label>CVC <input inputmode="numeric" maxlength="3" placeholder="000" data-cvc></label>
+      <label>Titular <input placeholder="Nome do titular do cartão" required></label>
+    </div>
+    <button class="botao" type="submit">Confirmar pagamento</button>
+    <p class="erro" role="alert"></p>
+  </form>
+
+  <form class="caixa forma-pagamento" data-m="Pix" style="margin-top:16px">
+    <h3>Pix</h3>
+    <div class="campos">
+      <label>CPF <input inputmode="numeric" maxlength="14" placeholder="000.000.000-00" data-cpf></label>
+      <label>E-mail <input type="email" placeholder="voce@email.com"></label>
+      <label>Telefone <input type="tel" placeholder="(31) 90000-0000"></label>
+    </div>
+    <button class="botao" type="submit">Confirmar pagamento</button>
+    <p class="erro" role="alert"></p>
+  </form>
+  <div class="navegacao"><a href="#historico">Página de serviços</a></div>
+</section>
+
+<section class="tela" id="status">
+  <div class="etapas" id="steps">
+    <i id="bar"></i>
+    <div class="etapa">Serviço pendente<u></u></div>
+    <div class="etapa">Serviço iniciado<u></u></div>
+    <div class="etapa">Acabamento<u></u></div>
+    <div class="etapa">Últimos ajustes<u></u></div>
+    <div class="etapa">Serviço finalizado<u></u></div>
+  </div>
+  <p class="previsao"><b>Previsão de horário:</b>15:30 – 17:30</p>
+  <div class="caixa servico">
+    <div class="imagem" aria-hidden="true">🚗</div>
+    <div>
+      <p><b>Serviço:</b> Polimento estético</p>
+      <p><b>Empresa:</b> Auto Brilho</p>
+      <p><b>Horário:</b> 15:30</p>
+      <p><b>Local:</b> Rua do McQueen – Copacabana</p>
+    </div>
+  </div>
+  <dl class="lista-dados">
+    <dt>Forma de pagamento:</dt><dd id="forma">Pix</dd>
+    <dt>Status de pagamento:</dt><dd><span class="selo">Autorizado</span></dd>
+  </dl>
+  <div class="navegacao"><a href="#historico">Página de serviços</a><a href="#historico">Histórico de serviços →</a></div>
+</section>
+
+<section class="tela" id="historico">
+  <p style="font-size:15px;margin:0">Acompanhe seus serviços</p>
+  <div class="estatisticas">
+    <div class="estatistica">Total<b>3</b></div>
+    <div class="estatistica">Em andamento<b>1</b></div>
+    <div class="estatistica">Finalizados<b>1</b></div>
+  </div>
+  <input id="q" type="search" placeholder="Pesquisar serviço" aria-label="Pesquisar serviço" style="border-radius:20px">
+  <div class="filtros" id="chips">
+    <button class="filtro" data-f="" aria-pressed="true">Todos</button>
+    <button class="filtro" data-f="run" aria-pressed="false">Em andamento</button>
+    <button class="filtro" data-f="fin" aria-pressed="false">Finalizado</button>
+    <button class="filtro" data-f="can" aria-pressed="false">Cancelados</button>
+  </div>
+  <div id="list"></div>
+  <div class="navegacao"><a href="#pagamento">Página de serviços</a></div>
+</section>
+
+</main>
+
+</body>
+</html>
