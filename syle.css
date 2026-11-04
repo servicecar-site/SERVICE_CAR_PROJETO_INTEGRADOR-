@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.cabecalho {
+    display: flex;
+    background-color: #0b1130;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo-site {
+    width: 120px;
+    border-radius: 20px;
+}
+
+.cabecalho h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    font-size: 50px; 
+    margin-left: 30px;
+}
+
+
+.cabecalho_botoes {
+    display: flex;
+    gap: 15px; 
+}
+
+
+.cabecalho_botoes form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    margin-left: 450px;
+}
+
+
+.cabecalho_botoes a {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 50px;       
+    height: 50px;
+    object-fit: cover; 
+    border-radius: 50%;
+    margin-left: 600px;
+}
+
+.menus{
+    background-color: rgb(45, 48, 51);
+    font-weight: bold;
+}
+
+.menus ul{
+    display: flex;
+}
+
+.menus li{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menus a {
+    color: aliceblue;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inicio{
+    background-image: url('img_fred/Fundo\ hero\ azul\ abstrato\ elegante\ para\ site\ de\ carros.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
