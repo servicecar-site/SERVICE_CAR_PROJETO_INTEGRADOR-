@@ -19,7 +19,7 @@
 .cabecalho h1 {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
-    font-size: 50px; 
+    font-size: 60px; 
     margin-left: 30px;
 }
 
@@ -79,4 +79,45 @@
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.inicio{
+    display: flex;
+}
+
+.parte1 {
+    padding: 20px;
+}
+
+.parte1 img{
+    padding: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.titulos {
+    display: column;
+    margin-left: 150px;
+}
+
+.titulos h1{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.titulos p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 16, 27);
+    font-weight: bold;
+    margin-top: 80px;
+    background-color: aliceblue;
+    font-size: 40px;
+    margin-right: 70px;
+    border-radius: 20px;
+    padding: 20px;
 }
