@@ -37,6 +37,7 @@ main {
 /* ASIDE */
 aside {
     background-color: rgb(241, 241, 241);
+    width: 200px;
     max-width: 35%;
     text-align: center;
 }
@@ -51,20 +52,21 @@ aside a {
 /* DADOS DO USUÁRIO */
 hr {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 4%;
+}
+
+label {
+    text-align: start;
 }
 
 .main-content {
     font-size: 20px;
+    width: 100%;
 }
 
 .main-content img {
     border-radius: 100%;
    
-}
-
-.main-content div {
-    
 }
 
 .main-content h2 {
@@ -73,19 +75,26 @@ hr {
 }
 
 .content {
+    font-size: 20px;
     width: 600px;
+    row-gap: 20px;
 }
 
 /* Dados do cliente */
 .dadosPessoais {
-    padding-top: 10%;
+    padding-top: 6%;
+    text-align: center;
+}
+
+.nome {
+    text-align: start;
 }
 
 .cpf-nascimento {
     display: flex;
-    gap: 30px;
-    padding-top: 6%;
-    text-align: center;
+    padding-top: 4%;
+    justify-content: space-between;
+    
 }
 
 /* CAMPO NOME */
@@ -93,18 +102,28 @@ hr {
 /* CONTATO */
 .contato {
     display: flex;
+    gap: 30px;
+    row-gap: 20px;
 }
 
-.contato div {
+.contato {
     gap: 30px;
+    justify-content: space-between;
+    row-gap: 20px;
 }
 
 /* RUA E NÚMERO */
 .rua-numero {
     display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    row-gap: 20px;
 }
 .cidade-estado {
     display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    row-gap: 20px;
 }
 button {
     margin-top: 10%;
