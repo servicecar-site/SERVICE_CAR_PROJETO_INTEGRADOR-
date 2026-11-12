@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.cabecalho {
+    display: flex;
+    background-color: #0b1130;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo-site {
+    width: 120px;
+    border-radius: 20px;
+}
+
+.cabecalho h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    font-size: 60px; 
+    margin-left: 30px;
+}
+
+.cabecalho_botoes {
+    display: flex;
+    gap: 15px; 
+}
+
+.cabecalho_botoes form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    margin-left: 450px;
+}
+
+.cabecalho_botoes a {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil {
+    width: 50px;       
+    height: 50px;
+    object-fit: cover; 
+    border-radius: 50%;
+    margin-left: 600px;
+}
+
+.menus{
+    background-color: rgb(45, 48, 51);
+    font-weight: bold;
+}
+
+.menus ul{
+    display: flex;
+}
+
+.menus li{
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menus a {
+    color: aliceblue;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inicio{
+    background: linear-gradient(#0b1130 , #6275d3);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inicio{
+    display: flex;
+}
+
+.parte1 {
+    padding: 20px;
+}
+
+.parte1 img{
+    padding: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.titulos {
+    display: column;
+    margin-left: 150px;
+}
+
+.titulos a{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    background-color: rgb(44, 196, 39);
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 300px;
+}
+
+.titulos h1{
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.titulos p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(3, 16, 27);
+    font-weight: bold;
+    margin-top: 80px;
+    background-color: aliceblue;
+    font-size: 40px;
+    margin-right: 90px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+.principal{
+    background-color: #fff;
+}
+
+.sobre{
+    border-bottom: #000000 1px solid;
+    border-top: #000000 1px solid;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 50px;
+}
+
+.sobre h1 {
+    font-size: 58px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+._sobre {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+._sobre  img {
+    margin-left: 60px;
+    margin-right: 80px;
+    border-radius: 500PX;
+    margin-top: 50px;
+}
+
+._sobre p {
+    font-size: 30px;
+    margin-top: 50px;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-right: 70px;
+    color: #3b3b3b;
+}
+
+.area_cliente_agendamentos {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.area_cliente {
+    border: #2b405c 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    align-items: center;
+    background-color: #52535c;
+}
+
+.area_cliente img {
+    width: 200px;
+    left: auto;
+    border-radius: 360px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.area_cliente p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.area_cliente a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 55px;
+    margin-right: auto;
+    font-weight: bold;
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.conheca_servisos {
+    
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conheca_servisos h1 {
+    margin-bottom: 10px;
+    color: #0b1130;
+    text-align: center;
+}
+
+.agendamentos_proximos{
+    border: #0b1130 1px solid;
+}
+
+.agendamentos_proximos img{
+    width: 200px;
+    left: auto;
+}
+
+.agendamentos_proximos p{
+    font-size: 20px;
+}
+

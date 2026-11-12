@@ -4,8 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial - Service Car</title>
+    <link rel="stylesheet" href="syle.css">
 </head>
 <body>
-    <h1>Service car</h1>
+    
+    <header class="cabecalho">
+        <img src="img_fred/logo_sc.png" alt="logo do site" class="logo-site">
+        <h1>Service Car</h1>
+
+        <div class="cabecalho_botoes">
+            <form action="/buscar" method="get">
+                <label for="pesquisa"></label>
+                <input type="search" id="pesquisa" name="q" placeholder="Digite o que deseja encontrar">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <a href="dadoPessoal.html">
+                <img src="img_fred/istockphoto-1495088043-612x612.jpg" alt="foto de perfil" class="foto-perfil">
+            </a>
+        </div>
+    </header>
+
+    <nav class="menus" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Conheça vários serviços</a></li>
+          <li><a href="#oficinas-destaque">Oficinas em destaque</a></li>
+          <li><a href="#feedbacks">Feedbacks</a></li>
+        </ul>
+    </nav>
+
+    <div class="inicio">
+
+       <div class="parte1">
+            <img src="img_fred/images (4).jpg" alt="imagem de um carro">
+       </div>
+
+       <div class="titulos">
+            <h1>O site para buscar serviços automotivos é Aqui!</h1>
+            <p>Encontre as melhores oficinas, mecânicos e profissionais qualificados para cuidar do seu veículo com total praticidade e confiança.</p>
+
+            <a href="pesquisar.html">Encontrar oficina agora!!</a>
+       </div>
+
+    </div>
+
+    <main class="principal" id="sobre">
+        
+        <div class="sobre">
+            <h1>Sobre - Quem somos</h1>
+
+            <div class="_sobre">
+                <img src="img_fred/logo_sc.png" alt="logo da empresa">
+
+                <p>Encontrar o mecânico certo ou a peça ideal para o seu veículo não precisa ser uma tarefa difícil. O ServiceCar nasceu para simplificar a vida de quem dirige, conectando motoristas aos melhores profissionais e fornecedores do setor automotivo em um só lugar. <br>
+                Seja para uma manutenção preventiva, a troca de uma tubulação de freio especializada ou serviços de estética como a proteção de pintura, nossa missão é oferecer transparência, rapidez e confiança. Nós facilitamos a sua busca para que você gaste tempo com o que realmente importa: rodar com segurança.
+                </p>
+            </div>
+                
+        </div>
+
+        <div class="conheca_servisos" id="servicos">
+            <h1>Conheça nossos serviços</h1>
+
+            <div class="area_cliente_agendamentos">
+                <article class="area_cliente">
+                    <img src="img_fred/istockphoto-1495088043-612x612.jpg" alt="foto de perfil">
+                    <p>Entre em seu perfil</p>
+                    <a href="dadoPessoal.html">Clique aqui</a>
+                </article>
+
+                <article class="agendamentos_proximos">
+                    <img src="img_fred/images_agendamento.png" alt="agendamento">
+                    <P>Agendamentos proximos</P>
+
+
+                </article>
+
+                <article class="servisos_status">
+                    <P>Servisos e status</P>
+                </article>
+            </div>
+            
+
+        </div>
+        
+    </main>
+
+    
 </body>
 </html>
