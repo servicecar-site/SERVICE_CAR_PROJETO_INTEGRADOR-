@@ -80,17 +80,7 @@ hr {
 
 /* CAMPO NOME */
 .nome {
-
-/* CAMPO CPF E NASCIMENTO */
-}
-.cpf-nascimento {
-    display: flex;
-    gap: 40px;
-}
-
-/* CAMPO NASCIMENTO */
-.dataNascimento {
-
+font-size: 20px;
 }
 
 /* CONTATO */
