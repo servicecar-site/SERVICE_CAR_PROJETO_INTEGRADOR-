@@ -49,27 +49,51 @@ aside a {
 }
 
 /* DADOS DO USUÁRIO */
-.main-content {
-    margin-left: 30%;
+hr {
+    width: 100%;
+    margin-top: 6%;
+    margin-bottom: 6%;
 }
+
 .main-content img {
     border-radius: 100%;
+    margin-left: 190%;
+    margin-top: 20%;
+}
+
+.main-content div {
+    margin-left: 160%;
+}
+
+.main-content h2 {
+    margin-left: 160%;
+}
+
+.main-content hr {
+    margin-left: 160%;
+}
+
+/* Dados do cliente */
+.dadosPessoais {
+ padding-top: 10%;
 }
 
 /* CAMPO NOME */
 .nome {
 
-/* CAMPO CPE E NASCIMENTO */
+/* CAMPO CPF E NASCIMENTO */
 }
 .cpf-nascimento {
     display: flex;
+    gap: 40px;
 }
 
 /* CAMPO NASCIMENTO */
 .dataNascimento {
 
-/* CONTATO */
 }
+
+/* CONTATO */
 .contato {
     display: flex;
 }
@@ -82,7 +106,8 @@ aside a {
     display: flex;
 }
 button {
-    margin-top: 15px;
+    margin-top: 10%;
     padding: 15px;
     font-size: 20px;
+    margin-left: 210%;
 }
