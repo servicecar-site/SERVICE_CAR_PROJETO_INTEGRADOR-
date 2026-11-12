@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Car - Cadastro/Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header class="cabecalho">
+            <h1>Área de cadastro/login</h1>
+        </header>
+
+        <section class="conteudo">
+
+            <!-- Lado esquerdo -->
+            <div class="area-logo">
+                <div class="logo">
+
+                    <div class="simbolo">
+                        <span class="parte-branca"></span>
+                        <span class="parte-azul"></span>
+                    </div>
+
+                    <h2>SERVICE <span>CAR</span></h2>
+
+                    <p>CUIDADO EM CADA DETALHE</p>
+
+                </div>
+            </div>
+
+            <!-- Lado direito -->
+            <div class="area-cadastro">
+
+                <div class="pergunta">
+                    <p>O uso dessa conta é para fim:</p>
+                </div>
+
+                <div class="botoes">
+                    <button onclick="selecionarConta('pessoal')">
+                        pessoal
+                    </button>
+
+                    <button onclick="selecionarConta('profissional')">
+                        profissional
+                    </button>
+                </div>
+
+                <p id="mensagem"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
