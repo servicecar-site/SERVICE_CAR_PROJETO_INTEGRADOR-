@@ -1,3 +1,11 @@
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*=====esse e do frederico========*/
+/*=============================================================*/
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -69,6 +77,7 @@
     color: aliceblue;
     padding-left: 30px;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .inicio{
@@ -212,8 +221,7 @@
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-left: 55px;
-    margin-right: auto;
+    
     font-weight: bold;
     background-color: aquamarine;
     padding: 10px;
