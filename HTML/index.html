@@ -4,97 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página inicial - Service Car</title>
-    <link rel="stylesheet" href="CSS/syle.css">
+    <link rel="stylesheet" href="../CSS/syle.css">
 </head>
 <body>
-    
+
     <header class="cabecalho">
-        <img src="img_fred/logo_sc.png" alt="logo do site" class="logo-site">
-        <h1>ServiceCar</h1>
+        <div class="marca">
+            <img src="../img_fred/logo_sc.png" alt="Logo ServiceCar" class="logo-site">
+            <h1>ServiceCar</h1>
+        </div>
 
         <div class="cabecalho_botoes">
-            <form action="/buscar" method="get">
-                <label for="pesquisa"></label>
-                <input type="search" id="pesquisa" name="q" placeholder="Digite o que deseja encontrar">
+            <form action="/buscar" method="get" class="barra-pesquisa">
+                <input type="search" id="pesquisa" name="q" placeholder="Buscar oficinas, peças ou serviços..." aria-label="Pesquisar">
                 <button type="submit">Buscar</button>
             </form>
 
-            <a href="dadoPessoal.html">
-                <img src="img_fred/istockphoto-1495088043-612x612.jpg" alt="foto de perfil" class="foto-perfil">
+            <a href="dadoPessoal.html" class="link-perfil" title="Meu Perfil">
+                <img src="../img_fred/istockphoto-1495088043-612x612.jpg" alt="Foto de perfil" class="foto-perfil">
             </a>
         </div>
     </header>
 
     <nav class="menus" aria-label="Navegação principal">
         <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Conheça vários serviços</a></li>
-          <li><a href="#oficinas-destaque">Oficinas em destaque</a></li>
-          <li><a href="#feedbacks">Feedbacks</a></li>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#oficinas-destaque">Oficinas em Destaque</a></li>
+            <li><a href="#feedbacks">Feedbacks</a></li>
         </ul>
     </nav>
 
-    <div class="inicio">
-
-       <div class="parte1">
-            <img src="img_fred/images (4).jpg" alt="imagem de um carro">
-       </div>
-
-       <div class="titulos">
-            <h1>O site para buscar serviços automotivos é Aqui!</h1>
-            <p>Encontre as melhores oficinas, mecânicos e profissionais qualificados para cuidar do seu veículo com total praticidade e confiança.</p>
-
-            <a href="pesquisar.html">Encontrar oficina agora!!</a>
-       </div>
-
-    </div>
-
-    <main class="principal" id="sobre">
-        
-        <div class="sobre">
-            <h1>Sobre - Quem somos</h1>
-
-            <div class="_sobre">
-                <img src="img_fred/logo_sc.png" alt="logo da empresa">
-
-                <p>Encontrar o mecânico certo ou a peça ideal para o seu veículo não precisa ser uma tarefa difícil. O ServiceCar nasceu para simplificar a vida de quem dirige, conectando motoristas aos melhores profissionais e fornecedores do setor automotivo em um só lugar. <br>
-                Seja para uma manutenção preventiva, a troca de uma tubulação de freio especializada ou serviços de estética como a proteção de pintura, nossa missão é oferecer transparência, rapidez e confiança. Nós facilitamos a sua busca para que você gaste tempo com o que realmente importa: rodar com segurança.
-                </p>
+    <section class="inicio" id="inicio">
+        <div class="container hero-grid">
+            <div class="parte1">
+                <img src="../img_fred/images (4).jpg" alt="Veículo em manutenção automotiva">
             </div>
-                
-        </div>
 
-        <div class="conheca_servisos" id="servicos">
-            <h1>Conheça nossos serviços</h1>
-
-            <div class="area_cliente_agendamentos">
-                <article class="area_cliente">
-                    <img src="img_fred/istockphoto-1495088043-612x612.jpg" alt="foto de perfil">
-                    <p>Entre em seu perfil</p>
-                    <a href="dadoPessoal.html">Clique aqui</a>
-                </article>
-
-                <article class="agendamentos_proximos">
-                    <img src="img_fred/c8202f4c801b9dfe9882459008bb95ba.jpg" alt="agendamento">
-                    <P>Agendamentos</P>
-                    <a href="https://gemini.google.com/app?hl=pt-BR">Ir para agendementos</a>
-
-                </article>
-
-                <article class="servisos_status">
-                    <img src="img_fred/images-mecanica.png" alt="agendados">
-                    <P>Servisos e status</P>
-                    <a href="https://gemini.google.com/app?hl=pt-BR">Ir para agendementos</a>
-                </article>
+            <div class="titulos">
+                <h1>O site para buscar serviços automotivos é aqui!</h1>
+                <p>Encontre as melhores oficinas, mecânicos e profissionais qualificados para cuidar do seu veículo com total praticidade e confiança.</p>
+                <a href="pesquisar.html" class="btn-destaque">Encontrar oficina agora</a>
             </div>
-            
         </div>
+    </section>
 
-        
-        
+    <main class="principal">
+
+        <section class="sobre" id="sobre">
+            <div class="container">
+                <h2 class="titulo-secao">Sobre — Quem somos</h2>
+                <div class="_sobre">
+                    <img src="../img_fred/logo_sc.png" alt="Logo da empresa ServiceCar">
+                    <div class="texto-sobre">
+                        <p>Encontrar o mecânico certo ou a peça ideal para o seu veículo não precisa ser uma tarefa difícil. O <strong>ServiceCar</strong> nasceu para simplificar a vida de quem dirige, conectando motoristas aos melhores profissionais e fornecedores do setor automotivo em um só lugar.</p>
+                        <p>Seja para uma manutenção preventiva, troca especializada de componentes ou estética automotiva, nossa missão é oferecer transparência, rapidez e confiança para você rodar com total segurança.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-servicos" id="servicos">
+            <div class="container">
+                <h2 class="titulo-secao">Conheça nossos serviços</h2>
+
+                <div class="grid-cards">
+                    <article class="card-servico">
+                        <img src="../img_fred/istockphoto-1495088043-612x612.jpg" alt="Área do cliente">
+                        <h3>Área do Cliente</h3>
+                        <p>Acesse seus dados cadastrais, histórico de veículos e preferências.</p>
+                        <a href="dadoPessoal.html" class="btn-card">Acessar perfil</a>
+                    </article>
+
+                    <article class="card-servico">
+                        <img src="../img_fred/c8202f4c801b9dfe9882459008bb95ba.jpg" alt="Agendamentos">
+                        <h3>Agendamentos</h3>
+                        <p>Marque revisões e manutenções nas oficinas parceiras sem filas.</p>
+                        <a href="#" class="btn-card">Ir para agendamentos</a>
+                    </article>
+
+                    <article class="card-servico">
+                        <img src="../img_fred/images-mecanica.png" alt="Serviços e status">
+                        <h3>Serviços e Status</h3>
+                        <p>Acompanhe em tempo real o andamento do reparo do seu veículo.</p>
+                        <a href="#" class="btn-card">Ver status</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="oficinas_em_destaque" id="oficinas-destaque">
+            <div class="container">
+                <h2 class="titulo-secao">Oficinas em destaque</h2>
+
+                <div class="grid-cards">
+                    <article class="card-horizontal">
+                        <img src="../img_fred/watermarked_img_15096343678859387512.webp" alt="Auto Nova Soluções Automotivas">
+                        <div class="descricao">
+                            <h3>Auto Nova Soluções Automotivas</h3>
+                            <p>Excelência, tecnologia e agilidade em cada detalhe do seu carro. Soluções completas para você rodar com segurança.</p>
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </article>
+
+                    <article class="card-horizontal">
+                        <img src="../img_fred/watermarked_img_5212663018488774604.webp" alt="Motores Brasil Soluções Automotivas">
+                        <div class="descricao">
+                            <h3>Motores Brasil Soluções Automotivas</h3>
+                            <p>Força, precisão e confiança em cada serviço. Especialistas em cuidar do coração do seu veículo com tecnologia.</p>
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </article>
+
+                    <article class="card-horizontal">
+                        <img src="../img_fred/be7b7671-280a-4968-921b-008778374cc3.webp" alt="Apex Auto Soluções Automotivas">
+                        <div class="descricao">
+                            <h3>Apex Auto Soluções Automotivas</h3>
+                            <p>Tecnologia, diagnóstico de precisão e proteção completa para o seu veículo. O futuro da manutenção automotiva.</p>
+                            <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-feedbacks" id="feedbacks">
+            <div class="container">
+                <h2 class="titulo-secao">O que dizem nossos clientes</h2>
+
+                <div class="grid-cards">
+                    <article class="card-feedback">
+                        <div class="cliente-info">
+                            <img src="../img_fred/photo-1500648767791-00dcc994a43e.avif" alt="Foto de Vítor Silva">
+                            <div>
+                                <h3>Vítor Silva</h3>
+                                <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                        <p>"Equipe extremamente profissional e qualificada. Resolveram um problema mecânico que outras oficinas não encontravam, e ainda me explicaram tudo com clareza. Ganharam um cliente fiel."</p>
+                    </article>
+
+                    <article class="card-feedback">
+                        <div class="cliente-info">
+                            <img src="../img_fred/gabriel.jpg" alt="Foto de Gabriel Santos">
+                            <div>
+                                <h3>Gabriel Santos</h3>
+                                <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                        <p>"Excelente atendimento e muita transparência na negociação. Levei meu carro para uma revisão completa e o serviço foi entregue antes do prazo combinado. Recomendo de olhos fechados!"</p>
+                    </article>
+
+                    <article class="card-feedback">
+                        <div class="cliente-info">
+                            <img src="../img_fred/photo-1506794778202-cad84cf45f1d.avif" alt="Foto de Lucas Oliveira">
+                            <div>
+                                <h3>Lucas Oliveira</h3>
+                                <span class="estrelas">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                        <p>"Melhor experiência que já tive no ramo automotivo. Ambiente organizado, preço justo e total compromisso com a qualidade do serviço. Com certeza voltarei sempre que precisar."</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <div>
+                <h2>ServiceCar</h2>
+                <p>Conectando você às melhores soluções automotivas da região.</p>
+            </div>
+            <div class="contato-info">
+                <h3>Contato e Localização</h3>
+                <p>📍 Av. João César de Oliveira, 555 — Eldorado, Contagem - MG</p>
+                <p>📞 (31) 9791-7111 (WhatsApp)</p>
+                <p>✉️ servicecar.site@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

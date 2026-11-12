@@ -2,306 +2,473 @@
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*=====esse e do frederico========*/
 /*=============================================================*/
+:root {
+    --azul-escuro: #0b1130;
+    --azul-medio: #1e3a8a;
+    --azul-destaque: #2563eb;
+    --verde-acao: #16a34a;
+    --verde-hover: #15803d;
+    --fundo-claro: #f4f6f9;
+    --branco: #ffffff;
+    --texto-principal: #1e293b;
+    --texto-secundario: #475569;
+    --borda-suave: #e2e8f0;
+    --sombra-card: 0 4px 12px rgba(11, 17, 48, 0.08);
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    background-color: var(--fundo-claro);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- CABEÇALHO --- */
 .cabecalho {
     display: flex;
-    background-color: #0b1130;
-    padding: 15px 20px;
-    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul-escuro);
+    padding: 16px 40px;
+    color: var(--branco);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .logo-site {
-    width: 120px;
-    border-radius: 20px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 14px;
 }
 
 .cabecalho h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 30px;
-    font-size: 60px; 
-    margin-left: 30px;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
 }
 
 .cabecalho_botoes {
     display: flex;
-    gap: 15px; 
+    align-items: center;
+    gap: 24px;
 }
 
-.cabecalho_botoes form {
+.barra-pesquisa {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 0;
-    margin-left: 450px;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 4px;
 }
 
-.cabecalho_botoes a {
-    display: flex;
-    align-items: center;
+.barra-pesquisa input {
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    width: 260px;
+    font-size: 0.95rem;
+}
+
+.barra-pesquisa button {
+    background-color: var(--azul-destaque);
+    color: var(--branco);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.barra-pesquisa button:hover {
+    background-color: var(--azul-medio);
 }
 
 .foto-perfil {
-    width: 50px;       
-    height: 50px;
-    object-fit: cover; 
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-left: 600px;
+    border: 2px solid var(--azul-destaque);
+    transition: transform 0.2s;
 }
 
-.menus{
-    background-color: rgb(45, 48, 51);
-    font-weight: bold;
+.foto-perfil:hover {
+    transform: scale(1.06);
 }
 
-.menus ul{
+/* --- MENU DE NAVEGAÇÃO --- */
+.menus {
+    background-color: #161e42;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menus ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
     display: flex;
-}
-
-.menus li{
     list-style: none;
-    text-decoration: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .menus a {
-    color: aliceblue;
-    padding-left: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    display: block;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 18px;
+    transition: color 0.2s, background 0.2s;
 }
 
-.inicio{
-    background: linear-gradient(#0b1130 , #6275d3);
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
+.menus a:hover {
+    color: var(--branco);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-.inicio{
+/* --- BANNER PRINCIPAL (HERO) --- */
+.inicio {
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, #2b4494 100%);
+    color: var(--branco);
+    padding: 64px 0;
+}
+
+.hero-grid {
     display: flex;
+    align-items: center;
+    gap: 48px;
 }
 
 .parte1 {
-    padding: 20px;
+    flex: 1;
 }
 
-.parte1 img{
-    padding: 20px;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-bottom: 40px;
+.parte1 img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    display: block;
 }
 
 .titulos {
-    display: column;
-    margin-left: 150px;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
 }
 
-.titulos a{
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 40px;
-    background-color: rgb(44, 196, 39);
-    text-decoration: none;
-    padding: 20px;
-    border-radius: 20px;
-    margin-left: 300px;
-}
-
-.titulos h1{
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 90px;
-    margin-top: 40px;
-    margin-right: 40px;
+.titulos h1 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    font-weight: 800;
 }
 
 .titulos p {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(3, 16, 27);
-    font-weight: bold;
-    margin-top: 80px;
-    background-color: aliceblue;
-    font-size: 40px;
-    margin-right: 90px;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 80px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--azul-escuro);
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
 }
 
-.principal{
-    background-color: #fff;
+.btn-destaque {
+    background-color: var(--verde-acao);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 16px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4);
+    transition: background 0.2s, transform 0.2s;
 }
 
-.sobre{
-    border-bottom: #000000 1px solid;
-    border-top: #000000 1px solid;
-    margin-top: 50px;
-    padding-bottom: 50px;
-    margin-left: 50px;
+.btn-destaque:hover {
+    background-color: var(--verde-hover);
+    transform: translateY(-2px);
 }
 
-.sobre h1 {
-    font-size: 58px;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
+/* --- SEÇÕES GERAIS --- */
+section {
+    padding: 64px 0;
+}
+
+.titulo-secao {
+    font-size: 2rem;
+    color: var(--azul-escuro);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.titulo-secao::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--azul-destaque);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* --- SOBRE --- */
+.sobre {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda-suave);
 }
 
 ._sobre {
     display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
+    align-items: center;
+    gap: 48px;
 }
 
-._sobre  img {
-    margin-left: 60px;
-    margin-right: 80px;
-    border-radius: 500PX;
-    margin-top: 50px;
+._sobre img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--sombra-card);
+    flex-shrink: 0;
 }
 
-._sobre p {
-    font-size: 30px;
-    margin-top: 50px;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-right: 70px;
-    color: #3b3b3b;
+.texto-sobre p {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 16px;
 }
 
-.area_cliente_agendamentos {
-    padding: 20px;
+/* --- GRID DE CARDS --- */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+/* --- SERVIÇOS --- */
+.card-servico {
+    background-color: var(--branco);
+    border: 1px solid var(--borda-suave);
+    border-radius: 14px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--sombra-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+}
+
+.card-servico img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--fundo-claro);
+}
+
+.card-servico h3 {
+    font-size: 1.3rem;
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+}
+
+.card-servico p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.btn-card {
+    background-color: var(--azul-destaque);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.btn-card:hover {
+    background-color: var(--azul-escuro);
+}
+
+/* --- OFICINAS EM DESTAQUE --- */
+.oficinas_em_destaque {
+    background-color: var(--branco);
+    border-top: 1px solid var(--borda-suave);
+    border-bottom: 1px solid var(--borda-suave);
+}
+
+.card-horizontal {
+    background-color: var(--fundo-claro);
+    border: 1px solid var(--borda-suave);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.2s;
+}
+
+.card-horizontal:hover {
+    transform: translateY(-5px);
+}
+
+.card-horizontal img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.descricao {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.descricao h3 {
+    font-size: 1.2rem;
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+}
+
+.descricao p {
+    font-size: 0.95rem;
+    color: var(--texto-secundario);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.estrelas {
+    font-size: 1.1rem;
+}
+
+/* --- FEEDBACKS --- */
+.card-feedback {
+    background-color: var(--branco);
+    border: 1px solid var(--borda-suave);
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: var(--sombra-card);
+}
+
+.cliente-info {
     display: flex;
     align-items: center;
-    border-bottom: #000000 1px solid;
-    margin-right: 400px;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
-.area_cliente {
-    border: #2b405c 1px solid;
-    border-radius: 5px;
-    padding: 20px;
-    
-    background-color: #52535c;
-    
+.cliente-info img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.area_cliente img {
-    width: 250px;
-    left: auto;
-    border-radius: 360px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+.cliente-info h3 {
+    font-size: 1.1rem;
+    color: var(--azul-escuro);
 }
 
-.area_cliente p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-right: auto;
-    margin-bottom: 20px;
+.card-feedback p {
+    color: var(--texto-secundario);
+    font-style: italic;
+    font-size: 0.95rem;
 }
 
-.area_cliente a {
-    text-decoration: none;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: aquamarine;
-    padding: 10px;
-    border-radius: 20px;
-    margin-left: 85px;
-}
-    
-
-.conheca_servisos {
-    margin-left: 400px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-
+/* --- RODAPÉ --- */
+.rodape {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    padding: 48px 0;
 }
 
-.conheca_servisos h1 {
-    margin-bottom: 10px;
-    color: #0b1130;
-    margin-left: 200px;
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
-.agendamentos_proximos{
-    border: #0b1130 1px solid;
-    text-align: center;
-    margin: 40px;
-    padding: 13px;
+.rodape h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
 }
 
-.agendamentos_proximos img{
-    width: 250px;
-    left: auto;
-    border-radius: 360px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
+.rodape h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #93c5fd;
 }
 
-.agendamentos_proximos p{
-    font-size: 20px;
-    padding: 30px;
-}
-   
-.agendamentos_proximos a{
-    font-size: 20px;
-    color: #000000;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    background-color: aquamarine;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 60px;
+.rodape p {
+    color: #cbd5e1;
+    margin-bottom: 6px;
 }
 
-.servisos_status{
-    padding: 40px;
-    border: #0b1130 1px solid;
-    text-align: center;
+/* --- RESPONSIVIDADE (CELULARES E TABLETS) --- */
+@media (max-width: 850px) {
+    .hero-grid, ._sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulos {
+        align-items: center;
+    }
+
+    .titulos h1 {
+        font-size: 2.1rem;
+    }
+
+    .cabecalho {
+        justify-content: center;
+    }
+
+    .barra-pesquisa input {
+        width: 180px;
+    }
 }
 
-.servisos_status p{
-    font-size: 20px;
-    padding: 20px; 
-}
-
-.servisos_status img{
-    width: 230px;
-    left: auto;
-    margin-bottom: 30px;
-}
-
-.servisos_status a {
-    text-decoration: none;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: aquamarine;
-    padding: 10px;
-    border-radius: 20px;
-}
 
